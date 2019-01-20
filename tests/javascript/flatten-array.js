@@ -14,7 +14,7 @@ var solutions = fs
     return [file.replace(/\.js$/, ""), require(dirname + "/" + file)];
   });
 
-describe.only("flatten-array", function() {
+describe("flatten-array", function() {
   solutions.forEach(function(solution) {
     var flatten = solution[1];
 
