@@ -1,5 +1,6 @@
-var assert = require('assert');
-var isBST  = require('../../solutions/javascript/binary-search-tree-check');
+var assert = require("assert");
+// var isBST  = require('../../solutions/javascript/binary-search-tree-check');
+var isBST = require("../../problems/binary-search-tree/binary-search-tree");
 
 var pass = {
   value: 8,
@@ -90,24 +91,24 @@ var bstFalse = {
   }
 };
 
-describe('binary search tree check', function () {
-  it('should pass a valid binary search tree', function () {
+describe.only("binary search tree check", function() {
+  it("should pass a valid binary search tree", function() {
     assert.ok(isBST(pass));
   });
 
-  it('should fail with a left subtree that is greater', function () {
+  it("should fail with a left subtree that is greater", function() {
     assert.ok(!isBST(failLeft));
   });
 
-  it('should fail with a right subtree that is smaller', function () {
+  it("should fail with a right subtree that is smaller", function() {
     assert.ok(!isBST(failRight));
   });
 
-  it('should fail with duplicate nodes', function () {
+  it("should fail with duplicate nodes", function() {
     assert.ok(!isBST(failDuplicate));
   });
 
-  it('should fail with bstFalse', function () {
+  it("should fail with bstFalse", function() {
     assert.ok(!isBST(bstFalse));
   });
 });
